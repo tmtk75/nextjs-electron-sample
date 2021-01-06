@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 type Props = {
   children: ReactNode;
@@ -9,6 +11,7 @@ type Props = {
 
 const Layout = ({ children, title = "This is the default title" }: Props) => (
   <div>
+    <CssBaseline />
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
