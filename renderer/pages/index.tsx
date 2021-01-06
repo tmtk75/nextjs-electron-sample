@@ -1,5 +1,6 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Link from "next/link";
+import Layout from "../components/Layout";
+import { Button } from "@material-ui/core";
 
 const IndexPage = () => {
   return (
@@ -9,9 +10,18 @@ const IndexPage = () => {
         <Link href="/about">
           <a>About</a>
         </Link>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            alert("clicked");
+          }}
+        >
+          Hello World
+        </Button>
       </p>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
