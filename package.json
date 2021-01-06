@@ -6,12 +6,13 @@
   "productName": "ElectronTypescriptNext",
   "scripts": {
     "clean": "rimraf dist main renderer/out renderer/.next",
-    "dev": "npm run build-electron && electron .",
+    "dev": "yarn build-electron && electron .",
+    "serve": "next dev renderer",
     "build-renderer": "next build renderer && next export renderer",
     "build-electron": "tsc -p electron-src",
-    "build": "npm run build-renderer && npm run build-electron",
-    "pack-app": "npm run build && electron-builder --dir",
-    "dist": "npm run build && electron-builder",
+    "build": "yarn build-renderer && yarn build-electron",
+    "pack-app": "yarn build && electron-builder --dir",
+    "dist": "yarn build && electron-builder",
     "type-check": "tsc"
   },
   "dependencies": {
