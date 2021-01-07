@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import { Button } from "@material-ui/core";
+import Editor from "@monaco-editor/react";
 
 const IndexPage = () => {
   return (
@@ -11,8 +12,6 @@ const IndexPage = () => {
           <a>About</a>
         </Link>
         <Button
-          variant="contained"
-          color="primary"
           onClick={() => {
             alert("clicked");
           }}
@@ -20,6 +19,7 @@ const IndexPage = () => {
           Hello World
         </Button>
       </p>
+      <Editor height="10vh" language="javascript" />
     </Layout>
   );
 };
