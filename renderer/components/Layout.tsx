@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { ThemeProvider } from "@material-ui/core/styles";
+// import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 type Props = {
